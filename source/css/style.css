@@ -1,0 +1,199 @@
+:root {
+  --basic-yellow: #FAC62D;
+  --basic-green: #64B851;
+  --basic-red: #EB4B51;
+  --basic-blue: #2794DB;
+  --basic_black: #383736;
+  --basic-gray: #989691;
+  --basic-bg-white: #FFFFFF;
+  --basic-bg-gray: #E5E5E5;
+  --special-bg-green: #F2FAF0;
+  --special-bg-red: #FAF0F0;
+  --special-shadow: #f5f5f5;
+}
+
+/*Global*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/*Page*/
+
+.page {
+  height: 100%;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--basic-gray);
+
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--basic-bg-gray);
+  padding: 40px 8px;
+}
+
+.page__main {}
+
+/*Apartment-card*/
+
+.apartment-card {
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  background-color: var(--basic-bg-white);
+  display: grid;
+  box-shadow: 0px 2px 24px var(--special-shadow);
+  border-radius: 8px;
+  position: relative;
+}
+
+.apartment-card__img-drawing {
+  justify-self: center;
+  padding-bottom: 16px;
+}
+
+.apartment-card__img-cross {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  fill: var(--basic-gray);
+}
+
+/*Params*/
+
+.params__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.params__name {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--basic_black);
+  padding-bottom: 16px;
+}
+
+.params__item {
+  padding-bottom: 12px;
+}
+
+.params__title {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.params__value {
+  font-weight: 500;
+  color: var(--basic_black);
+}
+
+.params__accreditation,
+.params__view {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  padding-top: 6px;
+  padding-right: 16px;
+  padding-bottom: 6px;
+  padding-left: 36px;
+  display: inline-block;
+  border-radius: 22px;
+  position: relative;
+}
+
+.params__accreditation::before,
+.params__view::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 12px;
+}
+
+.params__accreditation::before {
+  background-image: url("../img/svg/Icon-cross.svg");
+}
+
+.params__view::before {
+  background-image: url("../img/svg/Icon-check.svg");
+}
+
+.params__view {
+  margin-top: 6px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  color: var(--basic-green);
+  background-color: var(--special-bg-green);
+}
+
+.params__accreditation {
+  background-color: var(--special-bg-red);
+  margin-bottom: 20px;
+  color: var(--basic-red);
+}
+
+
+/*Purchase*/
+
+.purchase__text {
+  padding-bottom: 12px;
+}
+
+.purchase__booking-date {
+  font-weight: 500;
+  color: var(--basic-blue);
+}
+
+.purchase__booking-price {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--basic_black);
+}
+
+.purchase__developer-price {
+  font-weight: 500;
+  color: var(--basic-red);
+}
+
+.purchase__button {
+  font-weight: 500;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--basic-yellow);
+  color: var(--basic_black);
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.purchase__button img {
+  padding-right: 8px;
+}
