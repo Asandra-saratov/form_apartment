@@ -56,15 +56,18 @@ p {
   padding: 40px 8px;
 }
 
+@media (min-width: 768px) {
+  .page__body {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
 .page__main {}
 
 /*Apartment-card*/
 
 .apartment-card {
-  padding-top: 16px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
   background-color: var(--basic-bg-white);
   display: grid;
   box-shadow: 0px 2px 24px var(--special-shadow);
@@ -72,15 +75,36 @@ p {
   position: relative;
 }
 
+.apartment-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .apartment-card__wrapper {
+    flex-direction: row;
+    padding: 24px;
+  }
+}
+
 .apartment-card__img-drawing {
-  justify-self: center;
-  padding-bottom: 16px;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .apartment-card__img-drawing {
+    align-self: flex-start
+  }
 }
 
 .apartment-card__img-cross {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 16px;
+  top: 16px;
   fill: var(--basic-gray);
 }
 
@@ -88,7 +112,8 @@ p {
 
 .params__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: max-content max-content;
+  column-gap: 52px;
 }
 
 .params__name {
@@ -112,6 +137,32 @@ p {
 .params__value {
   font-weight: 500;
   color: var(--basic_black);
+}
+
+.params__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 6px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .params__wrapper {
+    flex-direction: row;
+    gap: 16px;
+    padding-bottom: 0;
+  }
+}
+
+.params__view {
+  color: var(--basic-green);
+  background-color: var(--special-bg-green);
+}
+
+.params__accreditation {
+  background-color: var(--special-bg-red);
+  color: var(--basic-red);
 }
 
 .params__accreditation,
@@ -145,22 +196,23 @@ p {
   background-image: url("../img/svg/Icon-check.svg");
 }
 
-.params__view {
-  margin-top: 6px;
-  margin-right: 16px;
-  margin-bottom: 8px;
-  color: var(--basic-green);
-  background-color: var(--special-bg-green);
-}
-
-.params__accreditation {
-  background-color: var(--special-bg-red);
-  margin-bottom: 20px;
-  color: var(--basic-red);
-}
-
-
 /*Purchase*/
+
+.purchase {
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .purchase {
+    padding-top: 24px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+    padding-left: 32px;
+  }
+}
 
 .purchase__text {
   padding-bottom: 12px;
