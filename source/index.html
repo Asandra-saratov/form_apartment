@@ -15,53 +15,61 @@
 
   <main class="page__main">
     <section class="apartment-card">
-      <img class="apartment-card__img-drawing" src="img/drawing.png" alt="">
-      <svg class="apartment-card__img-cross" width="24" height="24" viewBox="0 0 16 16" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd"
-          d="M11.5356 3.05022C11.9261 2.65969 12.5592 2.65969 12.9498 3.05022C13.3403 3.44074 13.3403 4.07391 12.9498 4.46443L9.41424 7.99996L12.9498 11.5355C13.3403 11.926 13.3403 12.5592 12.9498 12.9497C12.5592 13.3402 11.9261 13.3402 11.5356 12.9497L8.00003 9.41418L4.46449 12.9497C4.07397 13.3402 3.4408 13.3402 3.05028 12.9497C2.65975 12.5592 2.65975 11.926 3.05028 11.5355L6.58581 7.99996L3.05028 4.46443C2.65975 4.07391 2.65975 3.44074 3.05028 3.05022C3.4408 2.65969 4.07397 2.65969 4.46449 3.05022L8.00003 6.58575L11.5356 3.05022Z" />
-      </svg>
+      <div class="apartment-card__wrapper">
+        <img class="apartment-card__img-drawing" src="img/drawing.png" width="178" height="178" alt="">
+        <svg class="apartment-card__img-cross" width="24" height="24" viewBox="0 0 16 16" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11.5356 3.05022C11.9261 2.65969 12.5592 2.65969 12.9498 3.05022C13.3403 3.44074 13.3403 4.07391 12.9498 4.46443L9.41424 7.99996L12.9498 11.5355C13.3403 11.926 13.3403 12.5592 12.9498 12.9497C12.5592 13.3402 11.9261 13.3402 11.5356 12.9497L8.00003 9.41418L4.46449 12.9497C4.07397 13.3402 3.4408 13.3402 3.05028 12.9497C2.65975 12.5592 2.65975 11.926 3.05028 11.5355L6.58581 7.99996L3.05028 4.46443C2.65975 4.07391 2.65975 3.44074 3.05028 3.05022C3.4408 2.65969 4.07397 2.65969 4.46449 3.05022L8.00003 6.58575L11.5356 3.05022Z" />
+        </svg>
 
-      <div class="params">
-        <h2 class="params__name">2-к квартира</h2>
-        <ul class="params__list">
-          <li class="params__item">
-            <h3 class="params__title">Этаж</h3>
-            <p class="params__value">3 из 19</p>
-          </li>
-          <li class="params__item">
-            <h3 class="params__title">Высота потолков</h3>
-            <p class="params__value">3,2 м</p>
-          </li>
-          <li class="params__item">
-            <h3 class="params__title">Общая площадь</h3>
-            <p class="params__value">32,24 м²</p>
-          </li>
-          <li class="params__item">
-            <h3 class="params__title">Отделка</h3>
-            <p class="params__value">Предчистовая</p>
-          </li>
-          <li class="params__item">
-            <h3 class="params__title">Жилая площадь</h3>
-            <p class="params__value">22,24 м²</p>
-          </li>
-          <li class="params__item">
-            <h3 class="params__title">Площадь кухни</h3>
-            <p class="params__value">14,24 м²</p>
-          </li>
-        </ul>
-        <span class="params__view">Вы были на просмотре</span><br>
-        <span class="params__accreditation">Дом аккредитован другим банком</span>
+        <div class="params">
+          <h2 class="params__name">2-к квартира</h2>
+          <ul class="params__list">
+            <li class="params__item">
+              <h3 class="params__title">Этаж</h3>
+              <p class="params__value">3 из 19</p>
+            </li>
+            <li class="params__item">
+              <h3 class="params__title">Высота потолков</h3>
+              <p class="params__value">3,2 м</p>
+            </li>
+            <li class="params__item">
+              <h3 class="params__title">Общая площадь</h3>
+              <p class="params__value">32,24 м²</p>
+            </li>
+            <li class="params__item">
+              <h3 class="params__title">Отделка</h3>
+              <p class="params__value">Предчистовая</p>
+            </li>
+            <li class="params__item">
+              <h3 class="params__title">Жилая площадь</h3>
+              <p class="params__value">22,24 м²</p>
+            </li>
+            <li class="params__item">
+              <h3 class="params__title">Площадь кухни</h3>
+              <p class="params__value">14,24 м²</p>
+            </li>
+          </ul>
+          <div class="params__wrapper">
+            <span class="params__view">Вы были на просмотре</span>
+            <span class="params__accreditation">Дом аккредитован другим банком</span>
+          </div>
+        </div>
       </div>
 
       <div class="purchase">
-        <p class="purchase__text">
-          Ваша цена по брони до <span class="purchase__booking-date">19 сентября</span><br>
-          <span class="purchase__booking-price">3 312 666 Р</span>
-        </p>
-        <p class="purchase__text">
-          Текущая цена у застройщика дороже на <span class="purchase__developer-price">324 825 Р</span>
-        </p>
+        <div class="purchase__text">
+          <p>
+            Ваша цена по брони до <span class="purchase__booking-date">19 сентября</span><br>
+            <span class="purchase__booking-price">3 312 666 Р</span>
+          </p>
+          <p>
+            Текущая цена у застройщика<br>
+            дороже на <span class="purchase__developer-price">324 825 Р</span>
+          </p>
+        </div>
+
         <div class="purchase__button">
           <img src="img/svg/Icon-key.svg" alt="">
           <a href="#">Выбрать для покупки</a>

@@ -10,6 +10,7 @@
   --special-bg-green: #F2FAF0;
   --special-bg-red: #FAF0F0;
   --special-shadow: #f5f5f5;
+  --special-border: #F0EEEB;
 }
 
 /*Global*/
@@ -45,50 +46,118 @@ p {
   line-height: 20px;
   font-weight: 400;
   color: var(--basic-gray);
-
 }
 
 .page__body {
   min-height: 100%;
   margin: 0 auto;
   padding: 0;
+}
+
+.page__main {
   background-color: var(--basic-bg-gray);
   padding: 40px 8px;
 }
 
-.page__main {}
+@media (min-width: 768px) {
+  .page__main {
+    padding-top: 33px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 47px;
+  }
+}
+
+@media (min-width: 920px) {
+  .page__main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
 
 /*Apartment-card*/
 
 .apartment-card {
-  padding-top: 16px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
   background-color: var(--basic-bg-white);
   display: grid;
   box-shadow: 0px 2px 24px var(--special-shadow);
   border-radius: 8px;
+  padding: 20px;
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .apartment-card {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 32px;
+    padding-right: 28px;
+  }
+}
+
+@media (min-width: 920px) {
+  .apartment-card {
+    grid-template-columns: 62% 38%;
+  }
+}
+
+.apartment-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .apartment-card__wrapper {
+    flex-direction: row;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 920px) {
+  .apartment-card__wrapper {
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+}
+
 .apartment-card__img-drawing {
-  justify-self: center;
-  padding-bottom: 16px;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .apartment-card__img-drawing {
+    align-self: flex-start;
+  }
 }
 
 .apartment-card__img-cross {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 16px;
+  top: 16px;
   fill: var(--basic-gray);
 }
 
 /*Params*/
 
+@media (min-width: 768px) {
+  .params {
+    padding-left: 32px;
+  }
+}
+
 .params__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: max-content max-content;
+  column-gap: 52px;
+}
+
+@media (min-width: 1280px) {
+  .params__list {
+    grid-template-columns: max-content max-content max-content;
+  }
 }
 
 .params__name {
@@ -103,6 +172,13 @@ p {
   padding-bottom: 12px;
 }
 
+@media (min-width: 1280px) {
+  .params__item:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
 .params__title {
   font-size: 12px;
   line-height: 16px;
@@ -112,6 +188,30 @@ p {
 .params__value {
   font-weight: 500;
   color: var(--basic_black);
+}
+
+.params__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 6px;
+}
+
+@media (min-width: 768px) {
+  .params__wrapper {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.params__view {
+  color: var(--basic-green);
+  background-color: var(--special-bg-green);
+}
+
+.params__accreditation {
+  background-color: var(--special-bg-red);
+  color: var(--basic-red);
 }
 
 .params__accreditation,
@@ -145,24 +245,34 @@ p {
   background-image: url("../img/svg/Icon-check.svg");
 }
 
-.params__view {
-  margin-top: 6px;
-  margin-right: 16px;
-  margin-bottom: 8px;
-  color: var(--basic-green);
-  background-color: var(--special-bg-green);
-}
-
-.params__accreditation {
-  background-color: var(--special-bg-red);
-  margin-bottom: 20px;
-  color: var(--basic-red);
-}
-
-
 /*Purchase*/
 
-.purchase__text {
+.purchase {
+  display: grid;
+  row-gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--special-border);
+}
+
+@media (min-width: 768px) {
+  .purchase {
+    padding-top: 24px;
+    padding-right: 4px;
+    row-gap: 24px;
+  }
+}
+
+@media (min-width: 920px) {
+  .purchase {
+    padding-left: 32px;
+    padding-top: 0;
+    padding-right: 0;
+    border-top: none;
+    border-left: 1px solid var(--special-border);
+  }
+}
+
+.purchase__text p:first-child {
   padding-bottom: 12px;
 }
 
@@ -191,7 +301,13 @@ p {
   background-color: var(--basic-yellow);
   color: var(--basic_black);
   border-radius: 6px;
-  margin-top: 4px;
+
+}
+
+@media (min-width: 920px) {
+  .purchase__button {
+    align-self: end;
+  }
 }
 
 .purchase__button img {
