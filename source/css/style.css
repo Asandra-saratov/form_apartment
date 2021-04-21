@@ -75,6 +75,13 @@ p {
   }
 }
 
+@media (min-width: 1280px) {
+  .page__main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
 /*Apartment-card*/
 
 .apartment-card {
@@ -82,7 +89,10 @@ p {
   display: grid;
   box-shadow: 0px 2px 24px var(--special-shadow);
   border-radius: 8px;
-  padding: 20px;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   position: relative;
 }
 
@@ -90,28 +100,34 @@ p {
   .apartment-card {
     padding-top: 24px;
     padding-bottom: 24px;
-    padding-left: 32px;
+    padding-left: 24px;
     padding-right: 28px;
   }
 }
 
 @media (min-width: 920px) {
   .apartment-card {
-    grid-template-columns: 62% 38%;
+    grid-template-columns: 62.5% 36.5%;
+    padding-left: 24px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .apartment-card {
+    grid-template-columns: 73.5% 26.5%;
   }
 }
 
 .apartment-card__wrapper {
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
 }
 
 @media (min-width: 768px) {
   .apartment-card__wrapper {
     flex-direction: row;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-bottom: 24px;
   }
 }
 
@@ -157,6 +173,7 @@ p {
 @media (min-width: 1280px) {
   .params__list {
     grid-template-columns: max-content max-content max-content;
+    column-gap: 50px;
   }
 }
 
@@ -166,6 +183,16 @@ p {
   font-weight: 700;
   color: var(--basic_black);
   padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .params__name {
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 8px;
+    padding-top: 0;
+  }
 }
 
 .params__item {
@@ -193,13 +220,26 @@ p {
 .params__wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   padding-top: 6px;
 }
 
 @media (min-width: 768px) {
   .params__wrapper {
     flex-direction: row;
+    gap: 16px;
+    padding-top: 8px;
+  }
+}
+
+@media (min-width: 920px) {
+  .params__wrapper {
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .params__wrapper {
     gap: 16px;
   }
 }
@@ -250,7 +290,7 @@ p {
 .purchase {
   display: grid;
   row-gap: 16px;
-  padding-top: 16px;
+  padding-top: 20px;
   border-top: 1px solid var(--special-border);
 }
 
@@ -258,6 +298,7 @@ p {
   .purchase {
     padding-top: 24px;
     padding-right: 4px;
+    padding-left: 8px;
     row-gap: 24px;
   }
 }
@@ -273,7 +314,7 @@ p {
 }
 
 .purchase__text p:first-child {
-  padding-bottom: 12px;
+  padding-bottom: 14px;
 }
 
 .purchase__booking-date {
@@ -286,6 +327,13 @@ p {
   line-height: 28px;
   font-weight: 700;
   color: var(--basic_black);
+}
+
+@media (min-width: 768px) {
+  .purchase__booking-price {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .purchase__developer-price {
