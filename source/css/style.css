@@ -11,6 +11,10 @@
   --special-bg-red: #FAF0F0;
   --special-shadow: #f5f5f5;
   --special-border: #F0EEEB;
+  --special-yellow1: #F0B505;
+  --special-yellow2: #E1AB08;
+  --special-hf-gray: #F5F4F2;
+  --special-active-gray: #E7E4DE;
 }
 
 /*Global*/
@@ -149,11 +153,37 @@ p {
   }
 }
 
-.apartment-card__img-cross {
+.apartment-card__button {
   position: absolute;
-  right: 16px;
-  top: 16px;
+  right: 14px;
+  top: 14px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-color: inherit;
+  z-index: 1;
+}
+
+.apartment-card__img-cross {
   fill: var(--basic-gray);
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  z-index: 2;
+}
+
+.apartment-card__img-cross:hover,
+.apartment-card__img-cross:focus {
+  fill: var(--basic-black);
+}
+
+.apartment-card__button:hover,
+.apartment-card__button:focus {
+  background-color: var(--special-hf-gray);
+}
+
+.apartment-card__button:active {
+  background-color: var(--special-active-gray);
 }
 
 /*Params*/
@@ -349,7 +379,15 @@ p {
   background-color: var(--basic-yellow);
   color: var(--basic_black);
   border-radius: 6px;
+}
 
+.purchase__button:hover,
+.purchase__button:focus {
+  background-color: var(--special-yellow1);
+}
+
+.purchase__button:active {
+  background-color: var(--special-yellow2);
 }
 
 @media (min-width: 920px) {
