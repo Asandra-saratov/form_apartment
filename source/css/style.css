@@ -396,6 +396,7 @@ p {
   }
 }
 
-.purchase__button img {
+.purchase__button svg {
   padding-right: 8px;
+  align-self: center;
 }
